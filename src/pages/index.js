@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Box,Flex,Image,Link,List,ListItem,Text } from "@chakra-ui/react"
 import Loadable from "react-loadable"
+import {Helmet} from 'react-helmet'
 
 import "../css/style.css";
 import vidMp4 from '../videos/heroVid.mp4'
@@ -11,6 +12,7 @@ import postBg from '../images/postsBg.png'
 import postBgTwo from '../images/postsBgTwo.png'
 import Planes from '../images/planes.jpg'
 import Stump from '../images/stump.jpg'
+import ShareImg from '../images/shareImg.jpg'
 
 import Piper from '../images/piper.jpeg'
 import Suzanne from '../images/suzanne.png'
@@ -61,7 +63,16 @@ const MyParallaxComponent = Loadable({
 const IndexPage = () => {
   return (
     <main >
-      <title>-Post-</title>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>-Post- | a design/research collaborative from HiLo/YOW+.</title>
+        <meta
+          name="description"
+          content="We are delighted to announce that HiLo/YOW+, a design/research collaborative with the @hilolab.sala at @ubcsala and the YOW+ collective at @carleton_architecture - has been shortlisted as one of four teams to curate the Canadian Pavilion at the 2023 Venice Architecture Biennale. Thank you to the @canada.council and to the jury for this acknowledgement and our congratulations to the other teams! We’re looking forward to what comes next, and to sharing our proposal - titled “-Post-“ with all of you."
+        />
+        <meta property="og:image" content={ShareImg} />
+        <meta property="og:image:width" content="400" />
+      </Helmet>
       <Flex w='100vw' h='100vh'>
         <Box pos='absolute' zIndex='2' background='rgba(0,0,0,0.7)' w='100vw' h='100vh'></Box>
         <Flex position='fixed' top='0' left='0' width='100vw' height='100vh' isolation='isolate'>
