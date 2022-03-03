@@ -1,0 +1,8 @@
+body{
+    overflow-x: hidden !important;
+}
+.vidFile{
+    object-fit: cover;
+    width:100%;
+    height:100vh;
+}

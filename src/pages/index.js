@@ -1,0 +1,208 @@
+import * as React from "react"
+import { Box,Flex,Image,Link,List,ListItem,Text } from "@chakra-ui/react"
+import { ParallaxProvider, Parallax } from "react-skrollr"
+
+import "../css/style.css";
+import vidMp4 from '../videos/heroVid.mp4'
+import vidWebm from '../videos/heroVid.webm'
+import vidOgv from '../videos/heroVid.ogv'
+import vidPoster from '../images/vidPoster.jpg'
+import postBg from '../images/postsBg.png'
+import postBgTwo from '../images/postsBgTwo.png'
+import Planes from '../images/planes.jpg'
+import Stump from '../images/stump.jpg'
+import Base from '../images/base.png'
+
+import Piper from '../images/piper.jpeg'
+import Suzanne from '../images/suzanne.png'
+import Ozayr from '../images/Ozayr.jpeg'
+import Balir from '../images/blair.jpeg'
+import Thena from '../images/thena.jpeg'
+
+const teamMembers = [
+  {
+    name: 'Piper Bernbaum ',
+    org: 'YOW+',
+    photo: `${Piper}`
+  },
+  {
+    name: 'Suzanne Harris-Brandts',
+    org: 'YOW+',
+    photo: `${Suzanne}`
+  },
+  {
+    name: 'Ozayr Saloojee',
+    org: 'YOW+',
+    photo:`${Ozayr}`
+  },
+  {
+    name: 'Blair Satterfield',
+    org: 'HiLo',
+    photo:`${Balir}`
+  },
+  {
+    name: 'Thena Tak',
+    org: 'HiLo',
+    photo:`${Thena}`
+  }
+]
+
+const animateData = {
+  "data-top-bottom": "transform: translate(0px, -200px);",
+  "data-bottom-top": "transform: translate(-300px, 400px) ; "
+}
+const animateRightText = {
+  "data-top-bottom": "transform: translate(0px, 0px); ",
+  "data-bottom-top": "transform: translate(50px, 0px) ;  "
+}
+// markup
+const IndexPage = () => {
+  return (
+    <main >
+      <title>-Post-</title>
+      <ParallaxProvider
+        init={{
+          smoothScrollingDuration: 400,
+          smoothScrolling: true,
+          forceHeight: false
+        }}
+      >
+      <Flex w='100vw' h='100vh'>
+        <Box pos='absolute' zIndex='2' background='rgba(0,0,0,0.7)' w='100vw' h='100vh'></Box>
+        <Flex position='fixed' top='0' left='0' width='100vw' height='100vh' isolation='isolate'>
+          <video zindex='-1' className='vidFile' id='video' playsInline='' autoPlay muted loop poster={vidPoster} >
+            <source src={vidMp4}  type="video/mp4" />
+            <source src={vidWebm} type="video/webm" />
+            <source src={vidOgv} type="video/ogv" />
+          </video> 
+        </Flex>
+        <Flex flexDir='column' pos='fixed' zIndex='2' w='100vw'  h='100vh' justifyContent='center' alignItems='center' >
+          <Text as='h1' margin='0px' lineHeight='100px' zIndex='2' fontSize={['10vw', '10vw', '5vw','5vw']} color='#fff' fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
+          <Text as='h3' margin='0px' fontStyle='italic' color='#fff' zIndex='3'>HiLo/YOW+ Collaborative</Text>
+        </Flex>
+      </Flex>
+      <Flex id='intro'zIndex='3' color='#fff' display='inline-flex' alignItems='center' justifyContent='center' flexDirection='column' bg='#E21E3D' bgImage={`url(${postBg})`} bgRepeat='no-repeat' bgSize={['420px', '420px', '600px', '600px']} backgroundPosition={['right 5% bottom -10%','right 5% bottom -10%','right 0% bottom 0%','right 0% bottom 0%']} w='100vw' h='100vh' pos='relative' zindex='4'>
+        <Box w={['90%', '90%', '50%', '50%']} >
+          <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['10vw', '10vw', '5vw','5vw']} color='#fff' fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
+          <Text textAlign='justify' m='0 0 20px 0' as='p' >
+            We are delighted to announce that HiLo/YOW+, a design/research collaborative with the <Link textDecor='underline' href='https://www.instagram.com/hilolab.sala/' isExternal>@hilolab.sala</Link> at <Link textDecor='underline' href='https://www.instagram.com/ubcsala/' isExternal>@ubcsala</Link> and the YOW+ collective at <Link isExternal textDecor='underline' href='https://www.instagram.com/carleton_architecture/'>@carleton_architecture</Link> - has been shortlisted as one of four teams to curate the Canadian Pavilion at the 2023 Venice Architecture Biennale. 
+          </Text>
+          <Text textAlign='justify' as='p'>
+            Thank you to the <Link textDecor='underline' href='https://www.instagram.com/canada.council/' isExternal>@canada.council</Link> and to the jury for this acknowledgement and our congratulations to the other teams! We’re looking forward to what comes next, and to sharing our proposal - titled “-Post-“ with all of you.
+          </Text>
+        </Box>
+      </Flex>
+      <Flex display='inline-flex' zIndex='3' flexDirection='column' alignItems='center' justifyContent='center' w='100vw' h='50vh' bgImage={`url(${Planes})`} bgRepeat='no-repeat' bgPos={['right', 'right' , 'top left' , 'top left']} bgAttachment='fixed' bgSize='cover' pos='relative' >
+        <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='50vh'></Box>
+        <Box w='50%' zindex='5' textAlign='center' pos='relative' >
+          <Text as='h2' color='#fff'>
+            [Design Reverie / Inspirations / Reflections] Kong on a stack of cash.
+          </Text>
+        </Box>
+        
+      </Flex>
+      <Flex id='intro' color='#000' zIndex='3' display='inline-flex' alignItems='center' justifyContent='center' flexDirection='column' bg='#c7e416' bgImage={`url(${postBgTwo})`} bgRepeat='no-repeat' bgSize={['420px', '420px', '650px', '650px']} backgroundPosition={['left 5% top -10%','left 5% top -10%','left 0% top 0%','left 0% top 0%']} w='100vw' minHeight='100vh' pos='relative' zindex='4'>
+        <Box w='50%' >
+          <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['5vw', '5vw', '3vw','3vw']} color='#000' fontFamily='Helvetica' textAlign='center' fontWeight='bolder' >-Team-</Text>
+          <List display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
+          {teamMembers.map(member => 
+            <ListItem m='1em' key={member.name}>
+              <Box 
+                borderRadius='125px' 
+                zIndex='3' 
+                bgColor='#c7e416' 
+                blendMode='darken' 
+                w='250px' 
+                h='250px' 
+                position='absolute'
+                _hover={{
+                  opacity: 0
+                }}
+              />
+              <Box display='inline-flex'  borderRadius='125px' w='250px' h='250px' overflow='hidden' bgColor='pink' >
+                <Image 
+                  filter='grayscale(100%)' 
+                  w='100%' objectFit='cover' 
+                  src={member.photo} 
+                  title={member.name} 
+                  alt={`${member.name} thumbnail`}  
+                  
+                />
+              </Box>
+              <Text as='p' fontSize='0.9rem' textAlign='center'><strong>{member.name}</strong> / <em>{member.org}</em></Text>
+            </ListItem>
+          )}
+          </List>
+        </Box>
+      </Flex>
+      <Flex display='inline-flex' zIndex='3' flexDirection='column' alignItems='center' justifyContent='center' w='100vw' h='50vh' bgImage={`url(${Stump})`} bgRepeat='no-repeat' bgPos={['right', 'right' , 'top left' , 'top left']} bgAttachment='fixed' bgSize='cover' pos='relative' >
+        <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='50vh'></Box>
+        <Box w='50%' zindex='5' textAlign='center' pos='relative' >
+          <Text as='h2' color='#fff'>
+          [Design Reverie / Inspirations / Reflections] A cut Sequioa, in Sequioa National Park, California, ca. 1910. Photographer unknown. Collection Library of Congress
+          </Text>
+        </Box>
+        
+      </Flex>
+
+      <Flex overflow='hidden' color='#000' zIndex='3' display='inline-flex' alignItems='flex-start' justifyContent='center' flexDirection={['row','row','column','column']} bg='#e3711b' bgImage={`url(${postBgTwo})`} bgRepeat='no-repeat' bgSize={['420px', '420px', '650px', '650px']} backgroundPosition={['left 5% top -10%','left 5% top -10%','left 0% top 0%','left 0% top 0%']} w='100vw' minHeight='110vh' pos='relative' zindex='4'>
+        <Flex  overflow='hidden' w={['100vw', '100vw', '65vw', '65vw']}>
+            <Parallax data={animateData}>
+              <Image src={Base} title={`laurentian mlitary base in St-Adolphe-d'Howard, Quebec`} w='100%' objectFit='cover' />
+            </Parallax>
+        </Flex>
+       
+          <Flex 
+            flexDir='column' 
+            w='30vw'
+            pos='absolute'
+            right='2vw'
+            textAlign='right'
+            p='0 5vw 0 0'
+            color='#fff'
+          >
+            <Parallax data={animateRightText}>
+              <Text 
+                as='h1' 
+                margin='0px' 
+                zIndex='3' 
+                fontSize={['5vw', '5vw', '3vw','3vw']} 
+                fontFamily='Helvetica' 
+                fontWeight='bolder' 
+              >
+                -Post-
+              </Text>
+              <Text 
+                as='p'
+                zIndex='3' 
+                fontSize='14px' 
+                fontFamily='Helvetica' 
+                lineHeight='2rem'
+              >
+                The now abandoned Laurentian military base begin operations in 1950, in St. Adolphe-d’Howard, Quebec. Operated by NORAD, the base was part of the Pinetree Line, a network of 33 radar stations under join Canadian and American control, established to monitor possible air attaches from the former Soviet Union. The base was closed in 1987. Source -urbexplayground and photographs by Pierre Bourgault.
+              </Text>
+            </Parallax>
+          </Flex>    
+        
+        
+        </Flex>
+        <Flex 
+          display='inline-flex' 
+          zIndex='1' 
+          flexDirection='column' 
+          alignItems='center' 
+          justifyContent='center' 
+          w='100vw' h='100vh' 
+          
+          pos='relative' 
+          >
+            <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='100vh'></Box>
+          
+          
+          </Flex>
+      </ParallaxProvider>
+      </main>
+  )
+}
+
+export default IndexPage
