@@ -2,3 +2,4 @@
 .netlify
 .cache
 node_modules
+public
