@@ -87,7 +87,24 @@ const IndexPage = () => {
           <Text as='h3' margin='0px' fontStyle='italic' color='#fff' zIndex='3'>HiLo/YOW+ Collaborative</Text>
         </Flex>
       </Flex>
-      <Flex id='intro'zIndex='3' color='#fff' display='inline-flex' alignItems='center' justifyContent='center' flexDirection='column' bg='#E21E3D' bgImage={`url(${postBg})`} bgRepeat='no-repeat' bgSize={['420px', '420px', '600px', '600px']} backgroundPosition={['right 5% bottom -10%','right 5% bottom -10%','right 0% bottom 0%','right 0% bottom 0%']} w='100vw' h='100vh' pos='relative' zindex='4'>
+      <Flex 
+        id='intro'
+        zIndex='3' 
+        color='#fff' 
+        display='inline-flex' 
+        alignItems='center' 
+        justifyContent='center' 
+        flexDirection='column' 
+        bg='#E21E3D' 
+        bgImage={`url(${postBg})`} 
+        bgRepeat='no-repeat' 
+        bgSize={['270px', '270px', '600px', '600px']} 
+        backgroundPosition={['right 5% bottom -17%','right 5% bottom -17%','right 0% bottom 0%','right 0% bottom 0%']} 
+        w='100vw' 
+        h='100vh' 
+        pos='relative' 
+        zindex='4'
+      >
         <Box w={['90%', '90%', '50%', '50%']} >
           <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['10vw', '10vw', '5vw','5vw']} color='#fff' fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
           <Text textAlign='justify' m='0 0 20px 0' as='p' >
@@ -98,7 +115,21 @@ const IndexPage = () => {
           </Text>
         </Box>
       </Flex>
-      <Flex display='inline-flex' zIndex='3' flexDirection='column' alignItems='center' justifyContent='center' w='100vw' h='50vh' bgImage={`url(${Planes})`} bgRepeat='no-repeat' bgPos={['right', 'right' , 'top left' , 'top left']} bgAttachment='fixed' bgSize='cover' pos='relative' >
+      <Flex 
+        display='inline-flex' 
+        zIndex='3' 
+        flexDirection='column' 
+        alignItems='center' 
+        justifyContent='center' 
+        w='100vw' 
+        h='50vh' 
+        bgImage={`url(${Planes})`} 
+        bgRepeat='no-repeat' 
+        bgPos={['right', 'right' , 'top left' , 'top left']} 
+        bgAttachment='fixed' 
+        bgSize={`cover`} 
+        pos='relative' 
+      >
         <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='50vh'></Box>
         <Box w='50%' zindex='5' textAlign='center' pos='relative' >
           <Text as='h2' color='#fff'>
@@ -108,11 +139,11 @@ const IndexPage = () => {
         
       </Flex>
       <Flex id='intro' color='#000' zIndex='3' display='inline-flex' alignItems='center' justifyContent='center' flexDirection='column' bg='#c7e416' bgImage={`url(${postBgTwo})`} bgRepeat='no-repeat' bgSize={['420px', '420px', '650px', '650px']} backgroundPosition={['left 5% top -10%','left 5% top -10%','left 0% top 0%','left 0% top 0%']} w='100vw' minHeight='100vh' pos='relative' zindex='4'>
-        <Box w='50%' >
+        <Box  >
           <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['5vw', '5vw', '3vw','3vw']} color='#000' fontFamily='Helvetica' textAlign='center' fontWeight='bolder' >-Team-</Text>
-          <List display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
+          <List m='0' display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
           {teamMembers.map(member => 
-            <ListItem m='1em' key={member.name}>
+            <ListItem m='2em' key={member.name}>
               <Box 
                 borderRadius='125px' 
                 zIndex='3' 
