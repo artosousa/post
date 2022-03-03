@@ -2,6 +2,7 @@ import * as React from "react"
 import { ParallaxProvider, Parallax } from "react-skrollr"
 import { Flex,Image,Text } from "@chakra-ui/react"
 import Base from '../images/base.png'
+import postBgTwo from '../images/postsBgTwo.png'
 
 const animateData = {
     "data-top-bottom": "transform: translate(0px, -200px);",
@@ -30,7 +31,7 @@ const LoadableParallax = () => {
                     </Flex>
                 </Parallax>
 
-                <Parallax data={animateRightText}>
+                
                     <Flex 
                         flexDir='column' 
                         w='30vw'
@@ -60,7 +61,6 @@ const LoadableParallax = () => {
                             The now abandoned Laurentian military base begin operations in 1950, in St. Adolphe-d’Howard, Quebec. Operated by NORAD, the base was part of the Pinetree Line, a network of 33 radar stations under join Canadian and American control, established to monitor possible air attaches from the former Soviet Union. The base was closed in 1987. Source -urbexplayground and photographs by Pierre Bourgault.
                         </Text>
                     </Flex>  
-                </Parallax>
             </Flex>
         </ParallaxProvider>
     )
