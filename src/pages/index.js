@@ -140,9 +140,9 @@ const IndexPage = () => {
         
       </Flex>
 
-      <Flex overflow='hidden' color='#000' zIndex='3' display='inline-flex' alignItems='flex-start' justifyContent='center' flexDirection={['row','row','column','column']} bg='#e3711b' bgImage={`url(${postBgTwo})`} bgRepeat='no-repeat' bgSize={['420px', '420px', '650px', '650px']} backgroundPosition={['left 5% top -10%','left 5% top -10%','left 0% top 0%','left 0% top 0%']} w='100vw' minHeight='110vh' pos='relative' zindex='4'>
-        <MyParallaxComponent />
-      </Flex>
+      
+      <MyParallaxComponent />
+      
         <Flex 
           display='inline-flex' 
           zIndex='1' 
