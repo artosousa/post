@@ -128,7 +128,7 @@ const IndexPage = () => {
         alignItems='center' 
         justifyContent='center' 
         w='100vw' 
-        h={['100vh', '100vh','50vh' ,'50vh' ]} 
+        h='100vh'
         bgImage={`url(${Planes})`} 
         bgRepeat='no-repeat' 
         bgPos={['right', 'right' , 'top left' , 'top left']} 
@@ -141,7 +141,7 @@ const IndexPage = () => {
           zindex='4' 
           background='rgba(0,0,0,0.5)' 
           w='100vw' 
-          h={['100vh', '100vh','50vh' ,'50vh' ]}></Box>
+          h='100vh'></Box>
         <Box 
           w='50%' 
           zindex='5' 
@@ -219,7 +219,7 @@ const IndexPage = () => {
         alignItems='center' 
         justifyContent='center' 
         w='100vw' 
-        h={['100vh', '100vh','50vh' ,'50vh' ]}
+        h='100vh'
         bgImage={`url(${Stump})`} 
         bgRepeat='no-repeat' 
         bgPos={['right', 'right' , 'top left' , 'top left']} 
@@ -227,7 +227,7 @@ const IndexPage = () => {
         bgSize='cover' 
         pos='relative' 
         >
-        <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h={['100vh', '100vh','50vh' ,'50vh' ]}></Box>
+        <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='100vh'></Box>
         <Box w='50%' zindex='5' textAlign='center' pos='relative' >
           <Text as='h2' color='#fff'>
           [Design Reverie / Inspirations / Reflections] A cut Sequioa, in Sequioa National Park, California, ca. 1910. Photographer unknown. Collection Library of Congress
