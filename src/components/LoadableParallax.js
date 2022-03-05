@@ -67,8 +67,7 @@ const LoadableParallax = () => {
                     <Text 
                         as='p'
                         zIndex='3' 
-                        fontSize='14px' 
-                        fontFamily='Helvetica' 
+                        
                         lineHeight='2rem'
                     >
                         The now abandoned Laurentian military base begin operations in 1950, in St. Adolphe-d’Howard, Quebec. Operated by NORAD, the base was part of the Pinetree Line, a network of 33 radar stations under join Canadian and American control, established to monitor possible air attaches from the former Soviet Union. The base was closed in 1987. Source -urbexplayground and photographs by Pierre Bourgault.
