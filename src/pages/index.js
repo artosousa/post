@@ -1,7 +1,23 @@
-import React, {useMemo} from 'react'
-import { Box,Flex,Image,Link,List,ListItem,Text } from "@chakra-ui/react"
+import React from 'react'
+import {
+  AspectRatio,
+  Box,
+  Button,
+  Flex,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
+  Text,
+  useDisclosure } from "@chakra-ui/react"
 import Loadable from "react-loadable"
 import {Helmet} from 'react-helmet'
+import ReactPlayer from 'react-player'
 
 import "../css/style.css";
 import vidMp4 from '../videos/heroVid.mp4'
@@ -63,7 +79,16 @@ const MyParallaxComponent = Loadable({
 })
 
 const IndexPage = () => {
-   
+
+  const OverlayOne = () => (
+    <ModalOverlay
+      bg='blackAlpha.300'
+      backdropFilter='blur(10px)'
+    />
+  )
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [overlay, setOverlay] = React.useState(<OverlayOne />)
+
   return (
     <main id='skrollr-body'>
       <Helmet>
@@ -88,8 +113,65 @@ const IndexPage = () => {
         <Flex flexDir='column' pos='fixed' zIndex='2' w='100vw'  h='100vh' justifyContent='center' alignItems='center' >
           <Text as='h1' margin='0px' lineHeight='100px' zIndex='2' fontSize={['10vw', '10vw', '5vw','5vw']} color='#fff' fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
           <Text as='h3' margin='0px' fontStyle='italic' color='#fff' zIndex='3'>HiLo/YOW+ Collaborative</Text>
-        
-         
+          <Button 
+            onClick={() => {
+              setOverlay(<OverlayOne />)
+              onOpen()
+            }}
+            bg={`${colourBg[Math.floor(Math.random()*colourBg.length)]}`} 
+            color='#fff'
+            m='20px 0px'
+            transition='transform 250ms'
+            borderRadius='0'
+            _hover={{
+              filter: 'brightness(65%)',
+              transform: 'translateY(-10px)'
+            }}
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 26 26"
+                width='16'
+                height='16'
+                fill='#fff'
+                className='play-btn'
+              >
+                <polygon className="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+                <path className ="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+              </svg> 
+              Play Video
+            </Button>
+
+            <Modal 
+              isOpen={isOpen} 
+              onClose={onClose}
+              isCentered
+              size='6xl'
+              bg='blue'
+              backdropFilter='blur(10px) hue-rotate(90deg)'
+            >
+              {overlay}
+              <ModalContent>
+                <ModalCloseButton zIndex='222' bg='black' color='#fff' borderRadius='50%' top='0px' right='0px' />
+                <ModalBody bg='black'>
+                  <AspectRatio ratio={16 / 9} bgColor="#000">
+                    <ReactPlayer
+                      width="100%"
+                      height="100%"
+                      url='https://www.youtube.com/watch?v=YfjrzM-DjBw'
+                      playing
+                      config={{
+                        youtube: {
+                          playerVars: {
+                            controls: 1
+                          }
+                        }
+                      }}
+                    />
+                  </AspectRatio>
+                </ModalBody>
+              </ModalContent>
+            </Modal>
         </Flex>
       </Flex>
       <Flex 
