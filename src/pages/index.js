@@ -63,7 +63,7 @@ const MyParallaxComponent = Loadable({
 })
 
 const IndexPage = () => {
-  
+   
   return (
     <main id='skrollr-body'>
       <Helmet>

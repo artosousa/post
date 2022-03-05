@@ -78,4 +78,4 @@ const LoadableParallax = () => {
     )
 }
 
-export default LoadableParallax
+export default LoadableParallax 
