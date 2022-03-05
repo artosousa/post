@@ -23,6 +23,7 @@ import Thena from '../images/thena.jpeg'
 
 
 
+
 const teamMembers = [
   {
     name: 'Piper Bernbaum ',
@@ -51,7 +52,9 @@ const teamMembers = [
   }
 ]
 
+const colourBg = ['#e31e3d', '#e5501c','#e28118'  ]
 
+const randCol = colourBg[Math.floor(Math.random()*colourBg.length)];
 // markup
 
 const loader = ()=>(<div>Loading Content ...</div>)
@@ -95,7 +98,7 @@ const IndexPage = () => {
         alignItems='center' 
         justifyContent='center' 
         flexDirection='column' 
-        bg='#E21E3D' 
+        bg={`${colourBg[Math.floor(Math.random()*colourBg.length)]}`} 
         bgImage={`url(${postBg})`} 
         bgRepeat='no-repeat' 
         bgSize={['270px', '270px', '600px', '600px']} 
@@ -106,7 +109,7 @@ const IndexPage = () => {
         zindex='4'
       >
         <Box w={['90%', '90%', '50%', '50%']} >
-          <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['10vw', '10vw', '5vw','5vw']} color='#fff' fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
+          <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['10vw', '10vw', '5vw','5vw']} fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
           <Text textAlign='justify' m='0 0 20px 0' as='p' >
             We are delighted to announce that HiLo/YOW+, a design/research collaborative with the <Link textDecor='underline' href='https://www.instagram.com/hilolab.sala/' isExternal>@hilolab.sala</Link> at <Link textDecor='underline' href='https://www.instagram.com/ubcsala/' isExternal>@ubcsala</Link> and the YOW+ collective at <Link isExternal textDecor='underline' href='https://www.instagram.com/carleton_architecture/'>@carleton_architecture</Link> - has been shortlisted as one of four teams to curate the Canadian Pavilion at the 2023 Venice Architecture Biennale. 
           </Text>
@@ -148,7 +151,7 @@ const IndexPage = () => {
         
       </Flex>
       <Flex 
-        color='#000' 
+        color='#3d3b46' 
         zIndex='3' 
         display='inline-flex' 
         alignItems='center' 
@@ -170,23 +173,27 @@ const IndexPage = () => {
         zindex='4'
       >
         <Box  >
-          <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['5vw', '5vw', '3vw','3vw']} color='#000' fontFamily='Helvetica' textAlign='center' fontWeight='bolder' >-Team-</Text>
+          <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['5vw', '5vw', '3vw','3vw']} color='#3d3b46' fontFamily='Helvetica' textAlign='center' fontWeight='bolder' >-Team-</Text>
           <List m='0' display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
           {teamMembers.map(member => 
-            <ListItem m='2em' key={member.name}>
+            <ListItem
+              className='team-member'
+              m='2em' 
+              key={member.name}
+              
+            >
               <Box 
+                className='team-overlay'
                 borderRadius='125px' 
                 zIndex='3' 
                 bgColor='#c7e416' 
                 blendMode='darken' 
+                pointerEvents='none'
                 w='250px' 
                 h='250px' 
                 position='absolute'
-                _hover={{
-                  opacity: 0
-                }}
               />
-              <Box display='inline-flex'  borderRadius='125px' w='250px' h='250px' overflow='hidden' bgColor='pink' >
+              <Box className="team-thumb" display='inline-flex'  borderRadius='125px' w='250px' h='250px' overflow='hidden' bgColor='pink' >
                 <Image 
                   filter='grayscale(100%)' 
                   w='100%' objectFit='cover' 

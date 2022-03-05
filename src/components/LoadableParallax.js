@@ -8,10 +8,6 @@ const animateData = {
     "data-top-bottom": "transform: translate(0px, -200px);",
     "data-bottom-top": "transform: translate(-300px, 400px) ; "
 }
-const animateRightText = {
-    "data-top-bottom": "transform: translate(0px, 0px); ",
-    "data-bottom-top": "transform: translate(50px, 0px) ;  "
-}
 
 const LoadableParallax = () => {
     return(

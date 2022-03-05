@@ -6,3 +6,14 @@ body{
     width:100%;
     height:100vh;
 }
+.team-member .team-thumb{
+    transition: transform 250ms;
+}
+.team-member:hover .team-thumb{
+    transform: translateY(-10px);
+    
+}
+
+.team-member:hover .team-overlay{
+    opacity: 0;
+}
