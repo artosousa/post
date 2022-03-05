@@ -1,8 +1,7 @@
-import * as React from "react"
+import React, {useMemo} from 'react'
 import { Box,Flex,Image,Link,List,ListItem,Text } from "@chakra-ui/react"
 import Loadable from "react-loadable"
 import {Helmet} from 'react-helmet'
-import Spiral from 'react-spiral'
 
 import "../css/style.css";
 import vidMp4 from '../videos/heroVid.mp4'
@@ -55,7 +54,6 @@ const teamMembers = [
 
 const colourBg = ['#e31e3d', '#e5501c','#e28118'  ]
 
-const randCol = colourBg[Math.floor(Math.random()*colourBg.length)];
 // markup
 
 const loader = ()=>(<div>Loading Content ...</div>)
@@ -65,6 +63,7 @@ const MyParallaxComponent = Loadable({
 })
 
 const IndexPage = () => {
+  
   return (
     <main id='skrollr-body'>
       <Helmet>
@@ -89,8 +88,8 @@ const IndexPage = () => {
         <Flex flexDir='column' pos='fixed' zIndex='2' w='100vw'  h='100vh' justifyContent='center' alignItems='center' >
           <Text as='h1' margin='0px' lineHeight='100px' zIndex='2' fontSize={['10vw', '10vw', '5vw','5vw']} color='#fff' fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
           <Text as='h3' margin='0px' fontStyle='italic' color='#fff' zIndex='3'>HiLo/YOW+ Collaborative</Text>
-
-          
+        
+         
         </Flex>
       </Flex>
       <Flex 
