@@ -320,17 +320,7 @@ const IndexPage = (props) => {
                 key={member.name}
                 
               >
-                <Box 
-                  className='team-overlay'
-                  borderRadius='125px' 
-                  zIndex='3' 
-                  bgColor='#c7e416' 
-                  blendMode='darken' 
-                  pointerEvents='none'
-                  w='250px' 
-                  h='250px' 
-                  position='absolute'
-                />
+                
                 <Box className="team-thumb" display='inline-flex'  borderRadius='125px' w='250px' h='250px' overflow='hidden' bgColor='pink' >
                   <Image 
                     filter='grayscale(100%)' 
