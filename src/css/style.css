@@ -33,3 +33,13 @@ body{
 .react-player > div {
     position: absolute;
 }
+#intro p{
+    margin: 0px 0px 20px 0;
+}
+a {
+    text-decoration: underline !important;
+}
+a:hover{
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}

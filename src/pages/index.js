@@ -235,11 +235,52 @@ const IndexPage = (props) => {
         >
           <Box w={['90%', '90%', '50%', '50%']} >
             <Text as='h1' margin='0px' lineHeight='100px' zIndex='3' fontSize={['10vw', '10vw', '5vw','5vw']} fontFamily='Helvetica' fontWeight='bolder' >-Post-</Text>
-            <Text textAlign='justify' m='0 0 20px 0' as='p' >
+            
               <FormattedMessage 
                 id='about-text' 
+                values={{
+                  p: msg => (
+                    <p>{msg}</p>
+                  ),
+                  hilolink: msg => (
+                    <a 
+                      href='https://www.instagram.com/hilolab.sala/?hl=en' 
+                      target='_blank'
+                      rel="noreferrer"
+                    >
+                      {msg}
+                    </a>
+                  ),
+                  ubcsala: msg => (
+                    <a 
+                      href='https://www.instagram.com/ubcsala/' 
+                      target='_blank'
+                      rel="noreferrer"
+                    >
+                      {msg}
+                    </a>
+                  ),
+                  carleton: msg => (
+                    <a 
+                      href='https://www.instagram.com/carleton_architecture/' 
+                      target='_blank'
+                      rel="noreferrer"
+                    >
+                      {msg}
+                    </a>
+                  ),
+                  canadacouncil: msg => (
+                    <a 
+                      href='https://www.instagram.com/canada.council/' 
+                      target='_blank'
+                      rel="noreferrer"
+                    >
+                      {msg}
+                    </a>
+                  )
+                }}
+
               />
-            </Text>
             
           </Box>
         </Flex>
