@@ -95,7 +95,7 @@ const IndexPage = (props) => {
     <SimpleLocalize {...props}>
       <main id='skrollr-body'>
         <Flex 
-          position='absolute' 
+          position='fixed' 
           w='100vw' 
           h='px' 
           alignItems='flex-end' 
@@ -103,13 +103,15 @@ const IndexPage = (props) => {
           zIndex='10'
           flexDir='column'
         >
+          
           <List
-            w='90vw'
+            w='100vw'
             display='inherit'
             flexDirection='row'  
             alignItems='flex-end'
             justifyContent='flex-end'
             p='0 1.5vw 0 0'
+            bg='rgba(0,0,0,0.8)'
           >
             <ListItem m='5px'>
               <Link color='#fff' href='/' _hover={'text-decoration:underline'}>EN</Link>
