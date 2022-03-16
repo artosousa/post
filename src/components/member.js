@@ -4,6 +4,7 @@ import propTypes from 'prop-types'
 
 import { 
     Avatar,
+    Badge,
     Box,
     Divider,
     Drawer,
@@ -78,7 +79,7 @@ const TeamMember = props => {
 
                                 <Box ml='3' display='inherit' justifyContent='center' flexDir='column'>
                                     <Text fontFamily='helvetica' fontWeight='bold'>
-                                        {data.name}
+                                        {data.name} / <Badge marginLeft='5px' p='0 8px' variant='outline' color='white' boxShadow='inset 0 0 0px 1px #fff;'> {data.org}</Badge>
                                     </Text>
                                     <Text fontSize='sm'>
                                         <FormattedMessage  id={data.title} />
