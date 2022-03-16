@@ -7,7 +7,6 @@ import {
     Box,
     Drawer,
     DrawerBody,
-    DrawerHeader,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
@@ -20,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 
 
-
+const colourBg = ['#e31e3d', '#e5501c','#e28118'  ]
 const TeamMember = props => {
     const [memberBio, setMemberBio] = React.useState('md')
     const { isOpen: isDrawerOpen, onOpen: onDrawerOpen, onClose: onDrawerClose } = useDisclosure()
@@ -72,9 +71,9 @@ const TeamMember = props => {
                     <DrawerOverlay />
                     <DrawerContent color='#fff'>
                         <DrawerCloseButton/>
-                        <DrawerHeader bg='#e31e3d'>
-                            <Flex>
-                                <Avatar filter='grayscale(100%)'  src={data.photo} />
+                        <DrawerBody className='bio-copy' bg={`${colourBg[Math.floor(Math.random()*colourBg.length)]}`} >
+                            <Flex className='bio-header' marginBottom='1.5rem'>
+                                <Avatar size='md' filter='grayscale(100%)'  src={data.photo} />
                                 <Box ml='3'>
                                     <Text fontFamily='helvetica' fontWeight='bold'>
                                         {data.name}
@@ -84,8 +83,6 @@ const TeamMember = props => {
                                     </Text>
                                 </Box>
                             </Flex>
-                        </DrawerHeader>
-                        <DrawerBody className='bio-copy' bg='#e31e3d'>
                             <FormattedMessage
                                 values={{
                                     p: msg => (

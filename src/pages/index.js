@@ -51,10 +51,9 @@ const IndexPage = (props) => {
     />
   )
 
- 
-  const { isOpen: isModalopen, onOpen: onModalOpen, onClose: onModalClose } = useDisclosure()
-  const [overlay, setOverlay] = React.useState(<OverlayOne />)
-  
+const { isOpen: isModalopen, onOpen: onModalOpen, onClose: onModalClose } = useDisclosure()
+const [overlay, setOverlay] = React.useState(<OverlayOne />)
+
 
  
   
