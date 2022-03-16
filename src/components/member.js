@@ -5,6 +5,7 @@ import propTypes from 'prop-types'
 import { 
     Avatar,
     Box,
+    Divider,
     Drawer,
     DrawerBody,
     DrawerOverlay,
@@ -72,9 +73,10 @@ const TeamMember = props => {
                     <DrawerContent color='#fff'>
                         <DrawerCloseButton/>
                         <DrawerBody className='bio-copy' bg={`${colourBg[Math.floor(Math.random()*colourBg.length)]}`} >
-                            <Flex className='bio-header' marginBottom='1.5rem'>
-                                <Avatar size='md' filter='grayscale(100%)'  src={data.photo} />
-                                <Box ml='3'>
+                            <Flex className='bio-header' >
+                                <Avatar size='lg' filter='grayscale(100%)'  src={data.photo} />
+
+                                <Box ml='3' display='inherit' justifyContent='center' flexDir='column'>
                                     <Text fontFamily='helvetica' fontWeight='bold'>
                                         {data.name}
                                     </Text>
@@ -82,7 +84,9 @@ const TeamMember = props => {
                                         <FormattedMessage  id={data.title} />
                                     </Text>
                                 </Box>
+                                
                             </Flex>
+                            <Divider m='15px 0' borderColor='#fff' orientation='horizontal' />
                             <FormattedMessage
                                 values={{
                                     p: msg => (
