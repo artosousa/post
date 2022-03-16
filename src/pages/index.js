@@ -1,12 +1,12 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import SimpleLocalize from '../components/SimpleLocalize'
+import TeamMembers from '../components/team-members'
 import {
   AspectRatio,
   Box,
   Button,
   Flex,
-  Image,
   Link,
   List,
   ListItem,
@@ -32,44 +32,6 @@ import Planes from '../images/planes.jpg'
 import Stump from '../images/stump.jpg'
 import ShareImg from '../images/shareImg.jpg'
 
-import Piper from '../images/piper.jpeg'
-import Suzanne from '../images/suzanne.png'
-import Ozayr from '../images/Ozayr.jpeg'
-import Balir from '../images/blair.jpeg'
-import Thena from '../images/thena.jpeg'
-
-
-
-
-
-const teamMembers = [
-  {
-    name: 'Piper Bernbaum ',
-    org: 'YOW+',
-    photo: `${Piper}`
-  },
-  {
-    name: 'Suzanne Harris-Brandts',
-    org: 'YOW+',
-    photo: `${Suzanne}`
-  },
-  {
-    name: 'Ozayr Saloojee',
-    org: 'YOW+',
-    photo:`${Ozayr}`
-  },
-  {
-    name: 'Blair Satterfield',
-    org: 'HiLo',
-    photo:`${Balir}`
-  },
-  {
-    name: 'Thena Tak',
-    org: 'HiLo',
-    photo:`${Thena}`
-  }
-]
-
 const colourBg = ['#e31e3d', '#e5501c','#e28118'  ]
 
 // markup
@@ -88,8 +50,14 @@ const IndexPage = (props) => {
       backdropFilter='blur(10px)'
     />
   )
-  const { isOpen, onOpen, onClose } = useDisclosure()
+
+ 
+  const { isOpen: isModalopen, onOpen: onModalOpen, onClose: onModalClose } = useDisclosure()
   const [overlay, setOverlay] = React.useState(<OverlayOne />)
+  
+
+ 
+  
 
   return (
     <SimpleLocalize {...props}>
@@ -153,7 +121,7 @@ const IndexPage = (props) => {
             <Button 
               onClick={() => {
                 setOverlay(<OverlayOne />)
-                onOpen()
+                onModalOpen()
               }}
               bg={`${colourBg[Math.floor(Math.random()*colourBg.length)]}`} 
               color='#fff'
@@ -180,8 +148,8 @@ const IndexPage = (props) => {
               </Button>
 
               <Modal 
-                isOpen={isOpen} 
-                onClose={onClose}
+                isOpen={isModalopen} 
+                onClose={onModalClose}
                 isCentered
                 size='6xl'
                 bg='blue'
@@ -340,42 +308,9 @@ const IndexPage = (props) => {
           pos='relative' 
           zindex='4'
         >
-          <Box  >
-            <Text 
-              as='h1' 
-              margin='0px' 
-              lineHeight='100px' 
-              zIndex='3' 
-              fontSize={['5vw', '5vw', '3vw','3vw']} 
-              color='#3d3b46' 
-              fontFamily='Helvetica' 
-              textAlign='center' 
-              fontWeight='bolder' >
-                -<FormattedMessage id='team-title'/>-
-            </Text>
-            <List m='0' display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
-            {teamMembers.map(member => 
-              <ListItem
-                className='team-member'
-                m='2em' 
-                key={member.name}
-                
-              >
-                
-                <Box className="team-thumb" display='inline-flex'  borderRadius='125px' w='250px' h='250px' overflow='hidden' bgColor='pink' >
-                  <Image 
-                    filter='grayscale(100%)' 
-                    w='100%' objectFit='cover' 
-                    src={member.photo} 
-                    title={member.name} 
-                    alt={`${member.name} thumbnail`}  
-                    
-                  />
-                </Box>
-                <Text as='p' fontSize='0.9rem' textAlign='center'><strong>{member.name}</strong> / <em>{member.org}</em></Text>
-              </ListItem>
-            )}
-            </List>
+          <Box  w='70vw'>
+            <TeamMembers />
+            
           </Box>
         </Flex>
         <Flex 

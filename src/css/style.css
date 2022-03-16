@@ -19,6 +19,7 @@ body{
 .team-member:hover .team-overlay{
     opacity: 0;
 }
+
 .play-btn{
     margin: 0 10px 0 0;
 }
@@ -33,7 +34,8 @@ body{
 .react-player > div {
     position: absolute;
 }
-#intro p{
+#intro p,
+.bio-copy p{
     margin: 0px 0px 20px 0;
 }
 a {
