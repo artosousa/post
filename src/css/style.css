@@ -8,10 +8,10 @@ body{
     width:100%;
     height:100vh;
 }
-.team-member .team-thumb{
+.team-member {
     transition: transform 250ms;
 }
-.team-member:hover .team-thumb{
+.team-member:hover {
     transform: translateY(-10px);
     
 }

@@ -6,14 +6,12 @@ import {
     Avatar,
     Badge,
     Box,
-    Divider,
     Drawer,
     DrawerBody,
+    DrawerHeader,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
-    Flex,
-    Image,
     ListItem,
     Text,
     useDisclosure
@@ -22,6 +20,8 @@ import {
 
 
 const colourBg = ['#e31e3d', '#e5501c','#e28118'  ]
+let pickedBg
+
 const TeamMember = props => {
     const [memberBio, setMemberBio] = React.useState('md')
     const { isOpen: isDrawerOpen, onOpen: onDrawerOpen, onClose: onDrawerClose } = useDisclosure()
@@ -29,89 +29,101 @@ const TeamMember = props => {
     const handleMember = (newMember) => {
         setMemberBio(newMember)
         onDrawerOpen()
+        pickedBg = colourBg[Math.floor(Math.random()*colourBg.length)]
     }
     const {data} = props
     return (
         <>
             <ListItem
                 className='team-member'
-                m='2em' 
+                m='15px 0' 
                 key={data.name}
                 display='inline-flex'
                 flexDir='column'
                 alignItems='center'
                 justifyContent='center'
+                cursor='pointer'
+                onClick={() => handleMember(memberBio)}
+                _hover={'text-decoration:underline'}
+                width='350px'
               >
-                <Box 
-                  cursor='pointer'
-                  className="team-thumb" 
-                  display='inline-flex'  
-                  borderRadius='125px' 
-                  w='250px' 
-                  h='250px' 
-                  overflow='hidden' 
-                  bgColor='pink' 
-                  m='0 0 15px 0'
-                  onClick={() => handleMember(memberBio)}
-                  key={data}
-                  
-                >
-                    <Image 
-                        filter='grayscale(100%)' 
-                        w='100%' objectFit='cover' 
-                        src={data.photo} 
+              
+                    
+                    <Avatar
+                        key={data}
+                        w='220px'
+                        h='220px' 
+                        filter='grayscale(100%)'  
+                        src={data.photo}
                         title={data.name} 
                         alt={`${data.name} thumbnail`}  
+                        marginBottom='20px'
                     />
+                <Box w='70%'>
+                    <Text as='p' fontSize='0.9rem' textAlign='center'>
+                        <strong>{data.name}</strong>
+                        <Badge 
+                            marginLeft='5px' 
+                            p='0 8px' 
+                            variant='outline' 
+                            color='#000' 
+                            boxShadow='inset 0 0 0px 1px #000;'
+                        > 
+                            {data.org}
+                        </Badge>
+                    </Text>
+                    <Text as='p' fontSize='0.9rem' textAlign='center'>
+                        <FormattedMessage  id={data.title} />
+                    </Text>
                 </Box>
-                <Text as='p' fontSize='0.9rem' textAlign='center'>
-                    <strong>{data.name}</strong>
-                    <Badge 
-                        marginLeft='5px' 
-                        p='0 8px' 
-                        variant='outline' 
-                        color='#000' 
-                        boxShadow='inset 0 0 0px 1px #000;'
-                    > 
-                        {data.org}
-                    </Badge>
-                </Text>
-                <Text as='p' fontSize='0.9rem' textAlign='center'>
-                  <FormattedMessage  id={data.title} />
-                </Text>
 
                 <Drawer onClose={onDrawerClose} isOpen={isDrawerOpen} size='xl'>
-                    <DrawerOverlay />
+                    <DrawerOverlay backdropFilter='blur(10px)'/>
                     <DrawerContent color='#fff'>
-                        <DrawerCloseButton/>
-                        <DrawerBody className='bio-copy' bg={`${colourBg[Math.floor(Math.random()*colourBg.length)]}`} >
-                            <Flex className='bio-header' >
-                                <Avatar size='lg' filter='grayscale(100%)'  src={data.photo} />
+                        <DrawerCloseButton zIndex='11' />
+                        <DrawerHeader 
+                            bg={pickedBg} 
+                            display='inline-flex' 
+                            flexDir='row'
+                            filter='brightness(85%)'
+                        >
+                            <Avatar size='lg' filter='grayscale(100%)'  src={data.photo} />
 
-                                <Box ml='3' display='inherit' justifyContent='center' flexDir='column'>
-                                    <Text fontFamily='helvetica' fontWeight='bold'>
-                                        {data.name} 
-                                        <Badge 
-                                            marginLeft='5px' 
-                                            p='0 8px' 
-                                            variant='outline' 
-                                            color='white' 
-                                            boxShadow='inset 0 0 0px 1px #fff;'
-                                        > 
-                                            {data.org}
-                                        </Badge>
-                                    </Text>
-                                    <Text fontSize='sm'>
-                                        <FormattedMessage  id={data.title} />
-                                    </Text>
-                                </Box>
+                            <Box ml='3' display='inherit' justifyContent='center' flexDir='column'>
+                                <Text fontFamily='helvetica' fontWeight='bold'>
+                                    {data.name} 
+                                    <Badge 
+                                        marginLeft='5px' 
+                                        p='0 8px' 
+                                        variant='outline' 
+                                        color='white' 
+                                        boxShadow='inset 0 0 0px 1px #fff;'
+                                    > 
+                                        {data.org}
+                                    </Badge>
+                                </Text>
+                                <Text fontSize='sm'>
+                                    <FormattedMessage  id={data.title} />
+                                </Text>
                                 
-                            </Flex>
-                            <Divider m='15px 0' borderColor='#fff' orientation='horizontal' />
+                            </Box>
+                            
+                        </DrawerHeader>
+                        <DrawerBody  className='bio-copy' bg={pickedBg}>
+                            
                             <FormattedMessage
                                 values={{
                                     p: msg => (
                                       <p>{msg}</p>
+                                    ),
+                                    worldmatter: msg => (
+                                        <a 
+                                            href='http://www.worldofmatter.net/' 
+                                            target='_blank'
+                                            rel="noreferrer"
+                                        >
+                                            {msg}
+                                        </a>
                                     )
                                 }}
                                 id={data.bio}
@@ -119,6 +131,8 @@ const TeamMember = props => {
                         </DrawerBody>
                     </DrawerContent>
                 </Drawer>
+
+                
             </ListItem>
         </>
     )

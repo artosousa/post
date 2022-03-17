@@ -307,7 +307,7 @@ const [overlay, setOverlay] = React.useState(<OverlayOne />)
           pos='relative' 
           zindex='4'
         >
-          <Box  w='70vw'>
+          <Box  w='100vw'>
             <TeamMembers />
             
           </Box>
