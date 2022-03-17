@@ -58,6 +58,10 @@ const TeamMember = props => {
                         title={data.name} 
                         alt={`${data.name} thumbnail`}  
                         marginBottom='20px'
+                        transition='transform 250ms'
+                        _hover={{
+                            transform: 'translateY(-10px)'
+                        }}
                     />
                 <Box w='70%'>
                     <Text as='p' fontSize='0.9rem' textAlign='center'>

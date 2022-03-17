@@ -106,6 +106,8 @@ export default function TeamMembers(){
                             boxShadow='inset 0 0 0px 1px rgba(0,0,0,0.5)'
                             borderRadius='50px'
                             bg='rgba(0,0,0,0.2)'
+
+                            _hover={'background-color:#fff'}
                           >
                             <Avatar marginRight='20px' name={support} bg='#000' color='#fff'/>
                             <Text as='p'>{support}</Text>
