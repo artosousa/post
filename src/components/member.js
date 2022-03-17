@@ -52,7 +52,7 @@ const TeamMember = props => {
                   overflow='hidden' 
                   bgColor='pink' 
                   m='0 0 15px 0'
-                  onClick={() => handleMember(data)}
+                  onClick={() => handleMember(memberBio)}
                   key={data}
                   
                 >
@@ -64,7 +64,18 @@ const TeamMember = props => {
                         alt={`${data.name} thumbnail`}  
                     />
                 </Box>
-                <Text as='p' fontSize='0.9rem' textAlign='center'><strong>{data.name}</strong> / <em>{data.org}</em></Text>
+                <Text as='p' fontSize='0.9rem' textAlign='center'>
+                    <strong>{data.name}</strong>
+                    <Badge 
+                        marginLeft='5px' 
+                        p='0 8px' 
+                        variant='outline' 
+                        color='#000' 
+                        boxShadow='inset 0 0 0px 1px #000;'
+                    > 
+                        {data.org}
+                    </Badge>
+                </Text>
                 <Text as='p' fontSize='0.9rem' textAlign='center'>
                   <FormattedMessage  id={data.title} />
                 </Text>
@@ -79,7 +90,16 @@ const TeamMember = props => {
 
                                 <Box ml='3' display='inherit' justifyContent='center' flexDir='column'>
                                     <Text fontFamily='helvetica' fontWeight='bold'>
-                                        {data.name} / <Badge marginLeft='5px' p='0 8px' variant='outline' color='white' boxShadow='inset 0 0 0px 1px #fff;'> {data.org}</Badge>
+                                        {data.name} 
+                                        <Badge 
+                                            marginLeft='5px' 
+                                            p='0 8px' 
+                                            variant='outline' 
+                                            color='white' 
+                                            boxShadow='inset 0 0 0px 1px #fff;'
+                                        > 
+                                            {data.org}
+                                        </Badge>
                                     </Text>
                                     <Text fontSize='sm'>
                                         <FormattedMessage  id={data.title} />
