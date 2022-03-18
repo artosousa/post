@@ -75,9 +75,7 @@ export default function TeamMembers(){
         <List m='0' w='100vw' display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
           {data.members.map((member, index) => {
             return(
-              <>
-                <TeamMember data={member} key={index} />
-              </>
+              <TeamMember data={member} key={index} />
             )
           })}
         </List>
@@ -87,12 +85,10 @@ export default function TeamMembers(){
           <Text as='h2' fontSize='1.6rem' m='0 0 30px 0' fontWeight='bolder' fontFamily='helvetica'>
             <FormattedMessage id='support-title' />
           </Text>
-          <List m={['0 0 75px 0','0 0 75px 0','0 0 75px 0','0 0 75px 0']} w='100vw' display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
-              {console.log}
-              {supports.map(support => {
+          <List m={['0 0 75px 0','0 0 75px 0','0 0 75px 0','0 0 55px 0']} w='100vw' display='inline-flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center'>
+              {supports.map((support, index) => {
                 return (
-                  <>
-                      <ListItem w='280px' m='10px 10px' >
+                      <ListItem w='280px' m='10px 10px' key={index}>
                         <Flex flexDir='row'>
                           <Badge 
                             variant='outline' 
@@ -107,14 +103,13 @@ export default function TeamMembers(){
                             borderRadius='50px'
                             bg='rgba(0,0,0,0.2)'
 
-                            _hover={'background-color:#fff'}
+                            _hover={{bg:'white'}}
                           >
                             <Avatar marginRight='20px' name={support} bg='#000' color='#fff'/>
                             <Text as='p'>{support}</Text>
                           </Badge>
                         </Flex>
                       </ListItem>
-                  </>
                 )
               })}
           </List>

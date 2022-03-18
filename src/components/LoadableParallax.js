@@ -12,13 +12,11 @@ const animateData = {
 
 const LoadableParallax = () => {
     return(
-        
-
         <ParallaxProvider
             init={{
-            smoothScrollingDuration: 400,
-            smoothScrolling: true,
-            forceHeight: false
+                smoothScrollingDuration: 100,
+                smoothScrolling: true,
+                forceHeight: true
             }}
         >
             <Flex 

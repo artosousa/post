@@ -37,20 +37,20 @@ const TeamMember = props => {
             <ListItem
                 className='team-member'
                 m='15px 0' 
-                key={data.name}
                 display='inline-flex'
                 flexDir='column'
                 alignItems='center'
                 justifyContent='center'
                 cursor='pointer'
                 onClick={() => handleMember(memberBio)}
-                _hover={'text-decoration:underline'}
+                _hover={{
+                    textDecor: 'underline'
+                }}
                 width='350px'
               >
               
                     
                     <Avatar
-                        key={data}
                         w='220px'
                         h='220px' 
                         filter='grayscale(100%)'  
@@ -115,23 +115,25 @@ const TeamMember = props => {
                         </DrawerHeader>
                         <DrawerBody  className='bio-copy' bg={pickedBg}>
                             
-                            <FormattedMessage
-                                values={{
-                                    p: msg => (
-                                      <p>{msg}</p>
-                                    ),
-                                    worldmatter: msg => (
-                                        <a 
-                                            href='http://www.worldofmatter.net/' 
-                                            target='_blank'
-                                            rel="noreferrer"
-                                        >
-                                            {msg}
-                                        </a>
-                                    )
-                                }}
-                                id={data.bio}
-                            />
+                            <Text lineHeight='32px'>
+                                <FormattedMessage
+                                    values={{
+                                        p: msg => (
+                                        <p>{msg}</p>
+                                        ),
+                                        worldmatter: msg => (
+                                            <a 
+                                                href='http://www.worldofmatter.net/' 
+                                                target='_blank'
+                                                rel="noreferrer"
+                                            >
+                                                {msg}
+                                            </a>
+                                        )
+                                    }}
+                                    id={data.bio}
+                                />
+                            </Text>
                         </DrawerBody>
                     </DrawerContent>
                 </Drawer>

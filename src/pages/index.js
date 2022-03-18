@@ -2,6 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import SimpleLocalize from '../components/SimpleLocalize'
 import TeamMembers from '../components/team-members'
+import Partners from '../components/partners'
 import {
   AspectRatio,
   Box,
@@ -81,7 +82,7 @@ const [overlay, setOverlay] = React.useState(<OverlayOne />)
             bg='rgba(0,0,0,0.8)'
           >
             <ListItem m='5px'>
-              <Link color='#fff' href='/' _hover={'text-decoration:underline'}>EN</Link>
+              <Link color='#fff' href='/' _hover={{textDecor: 'underline'}}>EN</Link>
             </ListItem>
             <ListItem m='5px' color='#fff'>
               |
@@ -309,7 +310,6 @@ const [overlay, setOverlay] = React.useState(<OverlayOne />)
         >
           <Box  w='100vw'>
             <TeamMembers />
-            
           </Box>
         </Flex>
         <Flex 
@@ -341,19 +341,48 @@ const [overlay, setOverlay] = React.useState(<OverlayOne />)
         
         <MyParallaxComponent  />
         
+        <Flex 
+          display='inline-flex' 
+          zIndex='1' 
+          flexDirection='column' 
+          alignItems='center' 
+          justifyContent='center' 
+          w='100vw' h='90vh' 
+          
+          pos='relative' 
+          >
+            <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='100vh'></Box>
+                
+          </Flex>
           <Flex 
+            color='#fff' 
+            p='100px 0 200px 0'
+            zIndex='3' 
             display='inline-flex' 
-            zIndex='1' 
-            flexDirection='column' 
             alignItems='center' 
-            justifyContent='center' 
-            w='100vw' h='100vh' 
-            
+            justifyContent='flex-start' 
+            flexDirection='column' 
+            bg='#a41464' 
+            bgImage={`url(${postBgTwo})`} 
+            bgRepeat='no-repeat' 
+            bgSize={['420px', '420px', '650px', '650px']} 
+            backgroundPosition={[
+              'left 5% top -10%',
+              'left 5% top -10%',
+              'left 0% -20px 0%',
+              'left 0% -20px 0%'
+            ]} 
+            w='100vw' 
+            minHeight='100vh' 
             pos='relative' 
-            >
-              <Box pos='absolute' zindex='4' background='rgba(0,0,0,0.5)' w='100vw' h='100vh'></Box>
-                  
-            </Flex>
+            zindex='4'
+        >
+          <Box  w='100vw'>
+            <Partners />
+          </Box>
+        </Flex>
+
+        
         
       </main>
     </SimpleLocalize>
