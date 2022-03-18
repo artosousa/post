@@ -137,7 +137,7 @@ export default function Partners() {
         <SimpleGrid
           w={{base: '100vw', md: '80vw'}}
           p={{base: '2rem', md: '0'}}
-          columns={{base: '3', md: '4', lg: '6'}}
+          columns={{base: '2', md: '4', lg: '6'}}
           spacing={{base: '5', md: '10'}}
         >
           {data.partners.map((partner, index) => {
