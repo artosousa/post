@@ -32,5 +32,12 @@
     "react-player": "^2.9.0",
     "react-scrollmagic": "^2.3.0",
     "react-skrollr": "^1.0.4"
+  },
+  "devDependencies": {
+    "@trevorblades/eslint-config": "^7.2.8",
+    "eslint": "^7.32.0"
+  },
+  "eslintConfig": {
+    "extends": "@trevorblades/eslint-config/react"
   }
 }

@@ -1,5 +1,2 @@
-const languages = ['en', 'fr'];
-const defaultLanguage =  'en';
-
-exports.defaultLanguage = defaultLanguage;
-exports.languages = languages;
+exports.defaultLanguage = 'en';
+exports.languages = ['en', 'fr'];
