@@ -287,7 +287,6 @@ const IndexPage = props => {
             <FormattedMessage
               id="about-text"
               values={{
-                p: msg => <p>{msg}</p>,
                 hilolink: msg => (
                   <a
                     href="https://www.instagram.com/hilolab.sala/?hl=en"
@@ -539,16 +538,6 @@ const IndexPage = props => {
               id="with-thanks-text"
             />
           </Box>
-          <Text
-            as="h1"
-            fontSize="2rem"
-            m="20px 0 0 0"
-            fontFamily="Helvetica"
-            textTransform="uppercase"
-            fontWeight="bolder"
-          >
-            <FormattedMessage id="without-post" />
-          </Text>
         </Flex>
       </main>
     </IntlProvider>
