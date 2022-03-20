@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: '',
-    siteUrl: 'https://www.yourdomain.tld'
+    siteUrl: 'https://www.postexhibition.ca/'
   },
   plugins: ['@chakra-ui/gatsby-plugin', 'gatsby-plugin-react-helmet']
 };

@@ -52,8 +52,8 @@ const TeamMember = props => {
           w="220px"
           h="220px"
           filter="grayscale(100%)"
-          src={data.photo}
           title={data.name}
+          src={data.photo}
           alt={`${data.name} thumbnail`}
           marginBottom="20px"
           transition="transform 250ms"
@@ -73,9 +73,6 @@ const TeamMember = props => {
             >
               {data.org}
             </Badge>
-          </Text>
-          <Text as="p" fontSize="0.9rem" textAlign="center">
-            <FormattedMessage id={data.title} />
           </Text>
         </Box>
 
@@ -108,9 +105,6 @@ const TeamMember = props => {
                   >
                     {data.org}
                   </Badge>
-                </Text>
-                <Text fontSize="sm">
-                  <FormattedMessage id={data.title} />
                 </Text>
               </Box>
             </DrawerHeader>
