@@ -1,5 +1,5 @@
 import Balir from '../images/blair.jpeg';
-import Ozayr from '../images/ozayr.jpeg';
+import Ozayr from '../images/Ozayr.jpg';
 import Piper from '../images/piper.jpeg';
 import Suzanne from '../images/suzanne.jpeg';
 import Thena from '../images/thena.jpeg';
