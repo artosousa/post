@@ -1,11 +1,11 @@
-import AnnY from '../images/anny.jpeg';
-import Cease from '../images/cease.jpeg';
-import Doreen from '../images/doreen.jpeg';
-import Loretta from '../images/loretta.jpeg';
-import Nana from '../images/nana.jpeg';
-import Sajida from '../images/sajida.jpeg';
-import Tracey from '../images/tracey.jpeg';
-import Zoe from '../images/zoe.jpeg';
+import AnnY from '../images/anny.jpg';
+import Cease from '../images/cease.jpg';
+import Doreen from '../images/doreen.jpg';
+import Loretta from '../images/loretta.jpg';
+import Nana from '../images/nana.jpg';
+import Sajida from '../images/sajida.jpg';
+import Tracey from '../images/tracey.jpg';
+import Zoe from '../images/zoe.jpg';
 
 export const advisoryData = {
   advisors: [

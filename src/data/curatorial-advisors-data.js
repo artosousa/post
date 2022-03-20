@@ -1,5 +1,5 @@
-import Chiedza from '../images/chiedza.jpeg';
-import Yesomi from '../images/yesomi.jpeg';
+import Chiedza from '../images/chiedza.jpg';
+import Yesomi from '../images/yesomi.jpg';
 
 export const curatorialAdvisor = {
   curators: [

@@ -1,19 +1,19 @@
-import Ann from '../images/anny.jpeg';
-import Aziza from '../images/aziza.jpeg';
-import Jennifer from '../images/jennifer.jpeg';
-import Karen from '../images/karen.jpeg';
-import Lisa from '../images/lisa.jpeg';
-import Marc from '../images/marc.jpeg';
-import Menna from '../images/menna.jpeg';
-import Nana from '../images/nana.jpeg';
-import Natalia from '../images/natalia.jpeg';
-import Robert from '../images/robert.jpeg';
-import Sajida from '../images/sajida.jpeg';
-import Sean from '../images/sean.jpeg';
-import Susanna from '../images/susanna.jpeg';
-import Tom from '../images/tom.jpeg';
-import Zach from '../images/zach.jpeg';
-import Zoe from '../images/zoe.jpeg';
+import Ann from '../images/anny.jpg';
+import Aziza from '../images/aziza.jpg';
+import Jennifer from '../images/jennifer.jpg';
+import Karen from '../images/karen.jpg';
+import Lisa from '../images/lisa.jpg';
+import Marc from '../images/marc.jpg';
+import Menna from '../images/menna.jpg';
+import Nana from '../images/nana.jpg';
+import Natalia from '../images/natalia.jpg';
+import Robert from '../images/robert.jpg';
+import Sajida from '../images/sajida.jpg';
+import Sean from '../images/sean.jpg';
+import Susanna from '../images/susanna.jpg';
+import Tom from '../images/tom.jpg';
+import Zach from '../images/zach.jpg';
+import Zoe from '../images/zoe.jpg';
 
 export const ComissionedData = {
   workers: [

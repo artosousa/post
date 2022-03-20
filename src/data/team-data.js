@@ -1,8 +1,8 @@
-import Balir from '../images/blair.jpeg';
+import Balir from '../images/blair.jpg';
 import Ozayr from '../images/Ozayr.jpg';
-import Piper from '../images/piper.jpeg';
-import Suzanne from '../images/suzanne.jpeg';
-import Thena from '../images/thena.jpeg';
+import Piper from '../images/piper.jpg';
+import Suzanne from '../images/suzanne.jpg';
+import Thena from '../images/thena.jpg';
 
 export const teamData = {
   members: [

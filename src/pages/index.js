@@ -1,7 +1,7 @@
 import '../css/style.css';
 import AdvisoryTeam from '../components/advisory-team';
-import HighJump from '../images/highjump.jpeg';
-import Horses from '../images/stmarks.jpeg';
+import HighJump from '../images/highjump.jpg';
+import Horses from '../images/stmarks.jpg';
 import Loadable from 'react-loadable';
 import Planes from '../images/planes.jpg';
 import PropTypes from 'prop-types';
