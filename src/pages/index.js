@@ -349,7 +349,12 @@ const IndexPage = props => {
             w="100vw"
             h="100vh"
           ></Box>
-          <Box w="50%" zindex="5" textAlign="center" pos="relative">
+          <Box
+            w={{base: '90%', md: '55%'}}
+            zindex="5"
+            textAlign="center"
+            pos="relative"
+          >
             <Text as="h2" color="#fff">
               <FormattedMessage id="king-kong" />
             </Text>
@@ -403,7 +408,12 @@ const IndexPage = props => {
             w="100vw"
             h="100vh"
           ></Box>
-          <Box w="50%" zindex="5" textAlign="center" pos="relative">
+          <Box
+            w={{base: '90%', md: '55%'}}
+            zindex="5"
+            textAlign="center"
+            pos="relative"
+          >
             <Text as="h2" color="#fff">
               <FormattedMessage id="sequioa" />
             </Text>
@@ -459,7 +469,12 @@ const IndexPage = props => {
             w="100vw"
             h="100vh"
           ></Box>
-          <Box w="50%" zindex="5" textAlign="center" pos="relative">
+          <Box
+            w={{base: '90%', md: '55%'}}
+            zindex="5"
+            textAlign="center"
+            pos="relative"
+          >
             <Text as="h2" color="#fff">
               <FormattedMessage
                 values={{
@@ -493,7 +508,12 @@ const IndexPage = props => {
             w="100vw"
             h="100vh"
           ></Box>
-          <Box w="50%" zindex="5" textAlign="center" pos="relative">
+          <Box
+            w={{base: '90%', md: '50%'}}
+            zindex="5"
+            textAlign="center"
+            pos="relative"
+          >
             <Text as="h2" color="#fff">
               <FormattedMessage
                 values={{
@@ -530,7 +550,7 @@ const IndexPage = props => {
           >
             <FormattedMessage id="with-thanks-title" />
           </Text>
-          <Box w="55%">
+          <Box w={{base: '90%', md: '55%'}}>
             <FormattedMessage
               values={{
                 p: msg => <p>{msg}</p>
