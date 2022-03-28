@@ -33,7 +33,7 @@ export const ComissionedData = {
       bio: 'sean-bio'
     },
     {
-      name: 'Aziza Chaouni',
+      name: 'Aziza Chaouni Projects',
       photo: Aziza,
       bio: 'aziza-bio'
     },
@@ -48,15 +48,15 @@ export const ComissionedData = {
       bio: 'zach-bio'
     },
     {
-      name: 'Tom Carruthers',
-      photo: Tom,
-      bio: 'tom-bio',
-      team: 'Dream the Combine'
-    },
-    {
       name: 'Jennifer Newsom',
       photo: Jennifer,
       bio: 'jennifer-bio',
+      team: 'Dream the Combine'
+    },
+    {
+      name: 'Tom Carruthers',
+      photo: Tom,
+      bio: 'tom-bio',
       team: 'Dream the Combine'
     },
     {
@@ -65,7 +65,7 @@ export const ComissionedData = {
       bio: 'nana-bio'
     },
     {
-      name: 'Natalia Escobar-Castrillon',
+      name: 'Natalia Escobar-Castrilloìn',
       photo: Natalia,
       bio: 'natalia-bio'
     },
@@ -96,7 +96,7 @@ export const ComissionedData = {
       bio: 'zoe-bio'
     },
     {
-      name: 'Robert Jan Van Pelt.',
+      name: 'Robert Jan van Pelt',
       photo: Robert,
       bio: 'robert-bio'
     }

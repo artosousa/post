@@ -46,7 +46,7 @@ const AdvisoryMember = props => {
           filter="grayscale(100%)"
           src={data.photo}
           title={data.name}
-          alt={`${data.name} thumbnail`}
+          alt={`${data.name} jpg`}
           marginBottom="20px"
           transition="transform 250ms"
           _hover={{

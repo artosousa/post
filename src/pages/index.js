@@ -231,7 +231,7 @@ const IndexPage = props => {
                     <ReactPlayer
                       width="100%"
                       height="100%"
-                      url="https://www.youtube.com/watch?v=YfjrzM-DjBw"
+                      url="https://www.youtube.com/watch?v=6XTBRq3Ref4"
                       playing
                       config={{
                         youtube: {

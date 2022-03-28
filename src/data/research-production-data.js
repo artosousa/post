@@ -29,11 +29,11 @@ export const ResearchProData = {
       photo: Yow
     },
     {
-      name: 'Jon Ackerly',
+      name: 'Jon Ackerley',
       photo: Jon
     },
     {
-      name: 'Émélie Desrochers-Turgeon',
+      name: 'Eìmeìlie Desrochers-Turgeon',
       photo: Emelie
     },
     {
@@ -46,7 +46,7 @@ export const ResearchProData = {
       photo: AnnaL
     },
     {
-      name: "Connor O'Grady",
+      name: 'Connor O’Grady',
       photo: Connor,
       team: 'Shean Architects'
     },
@@ -78,6 +78,11 @@ export const ResearchProData = {
       team: 'Shean Architects'
     },
     {
+      name: 'Shelby Hagerman',
+      photo: Shelby,
+      team: 'Shean Architects'
+    },
+    {
       name: 'Kathy Hill',
       photo: Kathy,
       team: 'Shean Architects'
@@ -90,6 +95,11 @@ export const ResearchProData = {
     {
       name: 'Dan Le Geyt',
       photo: Dan,
+      team: 'Shean Architects'
+    },
+    {
+      name: 'Connor O’Grady',
+      photo: Connor,
       team: 'Shean Architects'
     },
     {

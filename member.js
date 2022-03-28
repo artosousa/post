@@ -54,7 +54,7 @@ const TeamMember = props => {
           filter="grayscale(100%)"
           title={data.name}
           src={data.photo}
-          alt={`${data.name} thumbnail`}
+          alt={`${data.name} jpg`}
           marginBottom="20px"
           transition="transform 250ms"
           _hover={{

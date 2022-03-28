@@ -10,27 +10,6 @@ import Zoe from '../images/zoe.jpg';
 export const advisoryData = {
   advisors: [
     {
-      name: 'Sajida K. Ali',
-      photo: Sajida,
-      bio: 'sajida-bio'
-    },
-    {
-      name: 'Ann Y. K. Choi',
-      photo: AnnY,
-      bio: 'ann-bio'
-    },
-    {
-      name: 'Nana aba Duncan',
-      photo: Nana,
-      bio: 'nana-bio'
-    },
-    {
-      name: 'Tracey Bonneau',
-      photo: Tracey,
-      bio: 'tracey-bio',
-      team: 'IM4 Lab'
-    },
-    {
       name: 'Doreen Manuel ',
       photo: Doreen,
       bio: 'doreen-bio',
@@ -47,6 +26,27 @@ export const advisoryData = {
       photo: Cease,
       bio: 'cease-bio',
       team: 'IM4 Lab'
+    },
+    {
+      name: 'Tracey Bonneau',
+      photo: Tracey,
+      bio: 'tracey-bio',
+      team: 'IM4 Lab'
+    },
+    {
+      name: 'Sajida K. Ali',
+      photo: Sajida,
+      bio: 'sajida-bio'
+    },
+    {
+      name: 'Ann Y.K. Choi',
+      photo: AnnY,
+      bio: 'ann-bio'
+    },
+    {
+      name: 'Nana aba Duncan',
+      photo: Nana,
+      bio: 'nana-bio'
     },
     {
       name: 'Zoe Todd',
